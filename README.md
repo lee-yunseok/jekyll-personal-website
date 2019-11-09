@@ -2,9 +2,17 @@
 
 The theme is an Jekyll expansion port of GitHub official personal website theme.
 
+###Showcase your software development skills
+
+This repository gives you the code you'll need to kickstart a personal website that showcases your work as a software developer. And when you manage the code in a GitHub repository, it will automatically render a webpage with the owner's profile information, including a photo, bio, and repositories.
+
+Your personal website is waiting to be personalized, though. It includes space to highlight your specific areas of interest in software development, like languages or industries. And it's standing by to publish your next great blog post.
+
+It's all possible using the combination of [Jekyll](https://jekyllrb.com/docs/) (for building your website), [GitHub Pages](https://pages.github.com/) (for hosting your website), and [GitHub's API](https://developer.github.com/v3/) (for automatically populating your website with content).
+
 ## Installation
 
-### Fork the the `lee-yunseok/Jekyll-Personal-Website` repo
+### Fork the the `lee-yunseok/jekyll-personal-website` repo
 
 You'll be making your own copy of the "personal website starter" repository so you have your own project to customize. A "fork" is a copy of a repository. So select "Fork" atop [the `github/personal-website` repository](https://github.com/github/personal-website).
 
@@ -76,7 +84,6 @@ Most customizations can be done in a matter of seconds, by revising your reposit
 1. Shut down your server by entering the keyboard command <kbd>CTRL</kbd>+<kbd>c</kbd>
 2. Restart your server: `bundle exec jekyll serve`
 
-
 #### Layout
 
 Your website will display in a two-column layout by default on larger-screen devices, with your photo, name, and basic information displayed in a left-aligned "sidebar." You can quickly switch to a "stacked" single-column layout by changing the line in your `_config.yml` file that reads `layout: sidebar` to `layout: stacked`.
@@ -84,6 +91,37 @@ Your website will display in a two-column layout by default on larger-screen dev
 #### Style
 
 Your website appears with a "light" white and gray background by default, with dark text. You can quickly switch to a "dark" background with white text by changing the line in your `_config.yml` file that reads `style: light` to `style: dark`.
+
+#### Timezone
+
+Set your [timezone](https://github.com/tzinfo/tzinfo-data/blob/master/lib/tzinfo/data/indexes/countries.rb) so your posts will be displayed in your timezone.
+
+Like this:
+
+`timezone`: America/Los_Angeles
+
+#### GitHub User Settings
+
+This theme requires you to enter GitHub user data.
+
+`origin_url`: Your website url.
+`repository`: your_login_name/your_repository
+`avatar_url`: Your GitHub avatar image url.
+`name`: Your name.
+`login`: Your GitHub login name.
+`email`: Your email address. Leave it blank if you don't want to show your email.
+`bio`: Your short bio.
+`org`: Your GitHub organization. Leave it blank if you don't have your own organization.
+`location`: Your location.
+`hireable`: Set `True` or `false`.
+
+#### Default Metadata tags
+
+This will fill <head> </head>
+
+`title`: Your website title.
+`description`: Your website description.
+`keyword`: Your website keyword.
 
 #### Projects
 
@@ -139,6 +177,33 @@ Links to your profile for each of the services you define will appear in the `<h
 
 If you're interested in adding a social media service that's not already supported in this repo, you can edit these two files to build that support.
 
+#### Facebook admin
+
+This will use your [facebook page metadata](https://www.facebook.com/help/community/question/?id=759789947398518) when who share your post. Leave it blank if you don't want it.
+
+`facebook_admins`: Your Facebook admin number.
+
+#### Disqus comment
+
+People can leave comments on your posts. Add your site and just type your [disqus short name](https://help.disqus.com/en/articles/1717111-what-s-a-shortname). Leave it blank if you don't want it.
+
+`disqus`: Your Disqus short name.
+
+#### Website verification
+
+Enter the verification codes to make them work.
+
+`google_verification`:
+`bing_verification`:
+`naver_verification`:
+`norton_verification`:
+
+#### Google Analytics
+
+Just add your [tracking code](https://support.google.com/analytics/answer/1008080).
+
+`google_analytics`:
+
 ## Adding pages
 
 To **add a page** to your website (e.g. detailed resume):
@@ -149,8 +214,38 @@ To **add a page** to your website (e.g. detailed resume):
 
 ```
 ---
-layout: default
+layout: pages
+title: "YOUR_PAGE_TITLE"
+description: "YOUR_PAGE_DESCRIPTION"
+permalink: pages/YOUR_PAGE/
 ---
+```
+4. If you want to use [liquid](https://jekyllrb.com/docs/liquid/), Enter only front matter in your page file, then create a file with the contents in `_includes`, and add `include_html: YOUR_LIQUID_FILE` to front matter in the page file.
+
+## Adding category page
+
+To **add a category page** to your website like **Blog** menu:
+
+1. Create a new `.html` or `.md` file at the `/_categories/` of your repository with front matter.
+
+```
+---
+layout: categories
+title: "YOUR_CATEGORY_TITLE"
+description: "YOUR_CATEGORY_DESCRIPTION"
+permalink: YOUR_CATEGORY_NAME
+pagination:
+  enabled: true
+  category: YOUR_CATEGORY_NAME
+---
+```
+
+2. Add a new link in your `_config.yml` with their [Octicon](https://octicons.github.com/).
+
+```
+  - title: YOUR_CATEGORY_NAME
+    octicon: OCTICON_NAME
+    url: YOUR_CATEGORY_NAME
 ```
 
 ## Adding blog posts
@@ -168,7 +263,17 @@ YEAR-MONTH-DAY-title.MARKUP
 
 ```
 ---
-title: "The title of my blog post"
+layout: post
+title: "YOUR_POST_TITLE"
+date: 2019-01-29 00:00:00
+description: 'meta description'
+og_type: article
+tags:
+- Blog
+categories:
+- Blog
+twitter_text: 'Type description for twitter card'
+introduction: 'Type your description for Thought section or category page'
 ---
 ```
 
@@ -177,6 +282,12 @@ Your website comes with a placeholder blog post that you can reference. Notably,
 While you can define a `layout` in the front matter, your website is pre-configured to assign the `post` layout to all of the posts in your `/_posts/` directory. So you don't have to declare that in your posts.
 
 Jekyll's conventions for authoring and managing blog posts is very flexible. You can [learn more in Jekyll's documentation for "Posts."](https://jekyllrb.com/docs/posts/)
+
+You can also specify an image or video to be used as a thumbnail in Thought section or category page. Just add `image: YOUR_IMAGE_URL` or `youtube: YOUTUBE_VIDEO_URL`, `vimeo: VIMEO_VIDEO_URL`, `video: YOUR_VIDEO_URL`.
+
+## Use Formspree contact form
+
+Replace your email address to `YOUR_EMAIL_ADDRESS` in the `_pages/contact.md`. So people can send you an inquiry mail via [Formspree](https://formspree.io/).
 
 ## Content and templates
 

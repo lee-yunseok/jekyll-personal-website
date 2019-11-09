@@ -2,7 +2,6 @@ layout: sidebar
 style: light
 
 timezone: your_time_zone
-locale: your_locale
 baseurl: ""
 origin_url: your_website_url
 repository: your_login_name/your_repository
@@ -20,8 +19,6 @@ description: default_website_description_title
 keyword: your_website_keyword
 classification: Website, Blog
 og_type: website
-# facebook_admins: your_facebook_admin_number
-# disqus: your_disqus_short_name
 
 plugins:
   - jekyll-octicons
@@ -103,6 +100,9 @@ links:
   - title: RSS Feed
     octicon: rss
     url: feed.xml
+    
+# facebook_admins: your_facebook_admin_number
+# disqus: your_disqus_short_name
 
 social_media:
   # behance: your_username

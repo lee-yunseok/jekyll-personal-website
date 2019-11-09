@@ -1,14 +1,11 @@
 ---
 layout: post
 
-title: Hello World
+title: "Welcome to Jekyll!"
 date: 2019-01-29 00:00:00
 
-#### Type thumbnail image address for Thought section ####
 image: https://github.dev/assets/images/profile-generator.png
-#### META tags for this post ####
 description: 'meta description'
-classification: Business
 og_type: article
 
 tags:
@@ -17,11 +14,6 @@ categories:
 - Blog
 twitter_text: 'Type description for twitter card'
 introduction: 'Type your description for Thought section'
----
-
----
-title: "Welcome to Jekyll!"
-published: false
 ---
 
 **Hello world**, this is my first Jekyll blog post.
