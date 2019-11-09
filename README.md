@@ -123,7 +123,7 @@ hireable: Set "True" or "false".
 
 #### Default Metadata tags
 
-This will fill <head> </head>
+This will fill `<head> </head>`.
 
 ```
 title: Your website title.
