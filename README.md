@@ -1,10 +1,12 @@
 # Jekyll Personal Website
 
-The theme is an blogger friendly Jekyll expansion port of GitHub official personal website theme. It supports card-like archives as the latest posts. Each post can have previous, next, related posts, and comments. Card archives support pagination by category are available. Designed to easily apply metadata, analytics, verification, rss feed and sitemap. Contact forms are also supported. I've attached a screenshot of the archive below, and you can see my personal website as a demo page [here](https://Lee-Yunseok.GitHub.io).
+The theme is an blogger friendly Jekyll expansion port of GitHub official personal website theme. It supports card-like archives as the latest posts. Each post can have previous, next, related posts, and comments. Card archives support pagination by category are available. Designed to easily apply metadata, analytics, verification, rss feed and sitemap. Contact forms are also supported.
+
+I've attached a screenshot of the archive below, and you can see my personal website as a demo page [here](https://Lee-Yunseok.GitHub.io).
 
 ![sample screenshot](https://yggdrasilstudio.sirv.com/lee_yunseok/2019/11/jekyll-personal-website-posts-cards-screenshot.webp)
 
-###Showcase your software development skills
+### Showcase your software development skills
 
 This repository gives you the code you'll need to kickstart a personal website that showcases your work as a software developer. And when you manage the code in a GitHub repository, it will automatically render a webpage with the owner's profile information, including a photo, bio, and repositories.
 
@@ -100,30 +102,34 @@ Set your [timezone](https://github.com/tzinfo/tzinfo-data/blob/master/lib/tzinfo
 
 Like this:
 
-`timezone`: America/Los_Angeles
+`timezone: America/Los_Angeles`
 
 #### GitHub User Settings
 
 This theme requires you to enter GitHub user data.
 
-`origin_url`: Your website url.
-`repository`: your_login_name/your_repository
-`avatar_url`: Your GitHub avatar image url.
-`name`: Your name.
-`login`: Your GitHub login name.
-`email`: Your email address. Leave it blank if you don't want to show your email.
-`bio`: Your short bio.
-`org`: Your GitHub organization. Leave it blank if you don't have your own organization.
-`location`: Your location.
-`hireable`: Set `True` or `false`.
+```
+origin_url: Your website url.
+repository: your_login_name/your_repository
+avatar_url: Your GitHub avatar image url.
+name: Your name.
+login: Your GitHub login name.
+email: Your email address. Leave it blank if you don't want to show your email.
+bio: Your short bio.
+org: Your GitHub organization. Leave it blank if you don't have your own organization.
+location: Your location.
+hireable: Set "True" or "false".
+```
 
 #### Default Metadata tags
 
 This will fill <head> </head>
 
-`title`: Your website title.
-`description`: Your website description.
-`keyword`: Your website keyword.
+```
+title: Your website title.
+description: Your website description.
+keyword: Your website keyword.
+```
 
 #### Projects
 
@@ -183,22 +189,24 @@ If you're interested in adding a social media service that's not already support
 
 This will use your [facebook page metadata](https://www.facebook.com/help/community/question/?id=759789947398518) when who share your post. Leave it blank if you don't want it.
 
-`facebook_admins`: Your Facebook admin number.
+`facebook_admins: Your Facebook admin number.`
 
 #### Disqus comment
 
 People can leave comments on your posts. Add your site and just type your [Disqus short name](https://help.disqus.com/en/articles/1717111-what-s-a-shortname). Leave it blank if you don't want it.
 
-`disqus`: Your Disqus short name.
+`disqus: Your Disqus short name.`
 
 #### Website verification
 
 Enter the verification codes to make them work.
 
-`google_verification`:
-`bing_verification`:
-`naver_verification`:
-`norton_verification`:
+```
+google_verification:
+bing_verification:
+naver_verification:
+norton_verification:
+```
 
 #### Google Analytics
 
@@ -227,7 +235,7 @@ permalink: pages/YOUR_PAGE/
 ---
 ```
 
-4. If you want to use Liquid, Enter only front matter in your page file, then create a file with the contents in `_includes`, and add `include_html: YOUR_LIQUID_FILE` to front matter in the page file.
+4. If you want to use Liquid, enter only front matter in your page file, then create a file with the contents in `_includes`, and add `include_html: YOUR_LIQUID_FILE` to front matter in the page file.
 
 ## Adding category page
 
@@ -295,30 +303,6 @@ You can also specify an image or video to be used as a thumbnail in Thought sect
 ## Use Formspree contact form
 
 Replace your email address to `YOUR_EMAIL_ADDRESS` in the `/_pages/contact.md`. So people can send you an inquiry mail via [Formspree](https://formspree.io/).
-
-## Content and templates
-
-To give you a sound foundation to start your personal website, your repository includes a handful of "includes" -- dynamic `.html` files that are re-used throughout your website. They're all stored in the `/_includes/` directory.
-
-There are the usual suspects, like `header.html` and `footer.html`. But there are few more worth pointing out:
-
-- `interests.html`: A heading and dynamic list of "My Interests," which is populated with the [topics](#topics) you list in your `_config.yml`.
-- `masthead.html`: A collection of your avatar, name, bio, and other metadata that's displayed prominently on all your webpages to help identify what the website is about.
-- `post-card.html`: A compact, summarized presentation of a blog post, re-used to display a listing of your latest blog posts.
-- `projects.html`: A heading and dynamic list of "My Projects," which is populated with a listing of your newest GitHub repositories.
-- `repo-card.html`: A compact, summarized presentation of a repository, re-used to display a listing of your GitHub repositories.
-- `thoughts.html`: A heading and dynamic list of "My Thoughts," which is populated with a listing of your latest blog posts.
-- `topic-card.html`: A compact, summarized presentation of a topic (defined in your `_config.yml`), re-used to display a listing of your interests.
-
-### Layouts
-
-Your repository comes with three layouts:
-
-- **default**: Not used by any of the built-in pages or posts, but useful for any new pages you create.
-- **home**: Used by your `index.html` homepage to display listings of your projects, interests, and (optionally) your blog posts.
-- **post**: Used by default by the posts in your `/_posts/` directory.
-
-Jekyll's convention for defining layouts is very flexible. You can [learn more about customizing your layouts in the Jekyll "Layouts" docs.](https://jekyllrb.com/docs/layouts/)
 
 ## Styles
 
