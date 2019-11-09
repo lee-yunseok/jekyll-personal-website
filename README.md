@@ -283,7 +283,7 @@ While you can define a `layout` in the front matter, your website is pre-configu
 
 Jekyll's conventions for authoring and managing blog posts is very flexible. You can [learn more in Jekyll's documentation for "Posts."](https://jekyllrb.com/docs/posts/)
 
-You can also specify an image or video to be used as a thumbnail in Thought section or category page. Just add `image: YOUR_IMAGE_URL` or `youtube: YOUTUBE_VIDEO_URL`, `vimeo: VIMEO_VIDEO_URL`, `video: YOUR_VIDEO_URL`.
+You can also specify an image or video to be used as a thumbnail in Thought section or category page. Just add `image: YOUR_IMAGE_URL` or `youtube: YOUTUBE_VIDEO_URL`, `vimeo: VIMEO_VIDEO_URL`, `video: YOUR_VIDEO_URL` to the front matter.
 
 ## Use Formspree contact form
 
