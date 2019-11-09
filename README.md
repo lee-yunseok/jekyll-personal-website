@@ -220,6 +220,7 @@ description: "YOUR_PAGE_DESCRIPTION"
 permalink: pages/YOUR_PAGE/
 ---
 ```
+
 4. If you want to use [liquid](https://jekyllrb.com/docs/liquid/), Enter only front matter in your page file, then create a file with the contents in `_includes`, and add `include_html: YOUR_LIQUID_FILE` to front matter in the page file.
 
 ## Adding category page
@@ -287,7 +288,7 @@ You can also specify an image or video to be used as a thumbnail in Thought sect
 
 ## Use Formspree contact form
 
-Replace your email address to `YOUR_EMAIL_ADDRESS` in the `_pages/contact.md`. So people can send you an inquiry mail via [Formspree](https://formspree.io/).
+Replace your email address to `YOUR_EMAIL_ADDRESS` in the `/_pages/contact.md`. So people can send you an inquiry mail via [Formspree](https://formspree.io/).
 
 ## Content and templates
 
