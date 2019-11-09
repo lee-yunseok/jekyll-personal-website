@@ -98,9 +98,7 @@ Your website appears with a "light" white and gray background by default, with d
 
 #### Timezone
 
-Set your [timezone](https://github.com/tzinfo/tzinfo-data/blob/master/lib/tzinfo/data/indexes/countries.rb) so your posts will be displayed in your timezone.
-
-Like this:
+Set your [timezone](https://github.com/tzinfo/tzinfo-data/blob/master/lib/tzinfo/data/indexes/countries.rb) like this below so your posts will be displayed in your timezone.
 
 `timezone: America/Los_Angeles`
 
