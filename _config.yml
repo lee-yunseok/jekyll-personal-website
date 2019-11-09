@@ -9,7 +9,7 @@ repository: your_login_name/your_repository
 avatar_url: your_github_avatar_img_url
 name: your_name
 login: your_github_login_name
-email: fill_or_not
+# email:
 bio: your_bio
 org: your_github_organization_or_blank
 location: your_location
