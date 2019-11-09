@@ -39,7 +39,7 @@ gem install jekyll bundler
 ```
 3. Change into your new directory
 ```
-cd Jekyll-Personal-Website
+cd jekyll-personal-website
 ```
 4. Install missing gems
 ```
