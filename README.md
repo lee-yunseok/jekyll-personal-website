@@ -16,7 +16,7 @@ It's all possible using the combination of [Jekyll](https://jekyllrb.com/docs/) 
 
 ## Installation
 
-### Fork the the `lee-yunseok/jekyll-personal-website` repo
+### Fork the `lee-yunseok/jekyll-personal-website` repo
 
 You'll be making your own copy of the "personal website starter" repository so you have your own project to customize. A "fork" is a copy of a repository. So select "Fork" atop [the `github/personal-website` repository](https://github.com/github/personal-website).
 
