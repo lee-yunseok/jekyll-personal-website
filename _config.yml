@@ -20,8 +20,8 @@ description: default_website_description_title
 keyword: your_website_keyword
 classification: your_website_default_classification
 og_type: website
-facebook_admins: your_facebook_admin_number
-disqus: your_disqus_short_name
+# facebook_admins: your_facebook_admin_number
+# disqus: your_disqus_short_name
 
 plugins:
   - jekyll-octicons
