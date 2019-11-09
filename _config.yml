@@ -91,6 +91,9 @@ links:
   - title: About
     octicon: person
     url: pages/about
+  - title: Blog
+    octicon: telescope
+    url: blog	
   - title: Archives
     octicon: archive
     url: archives
