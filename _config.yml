@@ -1,0 +1,145 @@
+layout: sidebar
+style: light
+
+timezone: your_time_zone
+locale: your_locale
+baseurl: ""
+origin_url: your_website_url
+repository: your_login_name/your_repository
+avatar_url: your_github_avatar_img_url
+name: your_name
+login: your_github_login_name
+email: fill_or_not
+bio: your_bio
+org: your_github_organization_or_blank
+location: your_location
+hireable: false
+
+title: default_website_title
+description: default_website_description_title
+keyword: your_website_keyword
+classification: your_website_default_classification
+og_type: website
+facebook_admins: your_facebook_admin_number
+disqus: your_disqus_short_name
+contact: your_email_to_receive_contact_from_formspree
+
+plugins:
+  - jekyll-octicons
+  - jekyll-github-metadata
+  - jemoji
+  - jekyll-archives
+  - jekyll-paginate-v2
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+jekyll-archives:
+  enabled:
+    - year
+    - month
+    - day
+    - tags
+  layout: directory
+  permalinks:
+    year: 'archives/:year/'
+    month: 'archives/:year/:month/'
+    day: 'archives/:year/:month/:day/'
+    tag: 'archives/tags/:name/'
+pagination:
+    enabled: true
+    debug: false
+    collection: 'posts'
+    per_page: 9
+    permalink: '/page/:num/'
+    title: ':title - page :num'
+    limit: 0
+    sort_field: 'date'
+    sort_reverse: true
+    category: 'posts'
+    tag: ''
+    locale: ''
+    trail:
+        before: 2
+        after: 2
+    extension: html
+    indexpage: 'index'
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "post"
+
+projects:
+  sort_by: pushed
+  # sort_by options:
+  #   - pushed
+  #   - stars
+  limit: 9
+  exclude:
+    archived: false
+    forks: true
+    projects:
+    # - repo-name
+
+links:
+  - title: Home
+    octicon: home
+    url: 
+  - title: About
+    octicon: person
+    url: pages/about
+  - title: Archives
+    octicon: archive
+    url: archives
+  - title: Tags
+    octicon: tag
+    url: archives/tags
+  - title: RSS Feed
+    octicon: rss
+    url: feed.xml
+
+social_media:
+  # behance: your_username
+  # dribbble: your_username
+  # facebook: your_username
+  # hackerrank: your_username
+  # instagram: your_username
+  # keybase: your_username
+  # linkedin: your_username
+  # mastodon: your_username
+  # medium: your_username
+  # stackoverflow: your_user_id
+  # telegram: your_username
+  # twitter: your_username
+  # unsplash: your_username
+  # vk: your_username
+  # website: http://your_website_url
+  # youtube: your_username
+
+topics:
+  - name: CSS
+    web_url: https://github.com/topics/css
+    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
+
+  - name: Web design
+
+  - name: Sass
+    web_url: https://github.com/topics/sass
+    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
+
+google_verification:
+bing_verification:
+naver_verification:
+norton_verification:
+google_syndication:
+
+include:
+  - _categories
+  - _pages
+exclude:
+  - Gemfile
+  - Gemfile.lock

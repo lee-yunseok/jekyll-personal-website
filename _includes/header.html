@@ -1,0 +1,69 @@
+{% if site.style == 'dark' %}
+  {% assign icon_color = "#ffffff" %}
+{% else %}
+  {% assign icon_color = "#24292e" %}
+{% endif %}
+
+{% assign content = page.content %}
+
+{% assign posts_total = site.posts | size %}
+
+<!doctype html>
+<html class="min-height-full">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }} | {% else %}{% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+    <meta name="keyword" content="{% if page.tags %}{% for tag in page.tags %}{{ tag }}, {% endfor %}{{site.keyword}}{% else %}{{site.keyword}}{% endif %}" />
+    <meta name="location" content="{{site.location}}"/>
+    <meta name="classification" content="{% if page.classification %}{{page.classification}}, {{site.classification}}{% else %}{{site.classification}}{% endif %}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="creator" content="{{site.name}} ({{site.origin_url}})" />
+    <meta name="publisher" content="{{site.name}} ({{site.origin_url}}" />
+    <meta property="og:type" content="{% if page.og_type %}{{page.og_type}}{% else %}{{site.og_type}}{% endif %}"/>
+    <meta property="og:url" content="{{site.origin_url}}{{ page.url }}" />
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% else %}{% endif %}{{ site.title }}" />
+    {% if page.image %}
+    	<meta property="og:image" content="{{page.image }}" />
+    {% endif %}	
+    <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta itemprop="name" content="{% if page.title %}{{ page.title }} | {% else %}{% endif %}{{ site.title }}"/>
+    <meta itemprop="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+    <link rel="shortcut icon" href="{{ site.origin_url }}/favicon.ico" type="image/x-icon" />
+    <meta name="application-name" content="{{site.name}} Website" />
+    <link href="{{ "/assets/styles.css" | relative_url }}" rel="stylesheet" type="text/css">
+    <link rel="canonical" href="{{site.origin_url}}{{ page.url }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.origin_url }}/feed.xml" />
+    {% if site.social_media.twitter %}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@{{site.social_media.twitter}}" />
+        <meta name="twitter:creator" content="@{{site.social_media.twitter}}" />
+        <meta name="twitter:domain" content="{{site.name}}" />
+        <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% else %}{% endif %}{{ site.title }}" />
+        <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+        {% if page.image %}
+            <meta property="twitter:image:src" content="{{page.image }}" />
+	{% endif %}
+    {% endif %}
+    {% if site.social_media.facebook %}
+        <meta property="article:publisher" content="https://www.facebook.com/{{site.social_media.facebook}}"/>
+    {% endif %}
+    {% if site.facebook_admins %}
+        <meta property="fb:admins" content="{{site.facebook_admins}}"/>
+    {% endif %}
+    {% if site.google_verification %}
+        <meta name="google-site-verification" content="{{site.google_verification}}" />
+    {% endif %}
+    {% if site.bing_verification %}
+        <meta name="msvalidate.01" content="{{site.bing_verification}}" />
+    {% endif %}
+    {% if site.norton_verification %}
+        <meta name="norton-safeweb-site-verification" content="{{site.norton_verification}}" />
+    {% endif %}
+    {% if site.naver_verification %}
+        <meta name="naver-site-verification" content="{{site.naver_verification}}"/>
+    {% endif %}
+  </head>
+  <body class="bg-white min-height-full" {% if site.style == 'dark' %}style="background-color: #2f363d !important"{% endif %}>

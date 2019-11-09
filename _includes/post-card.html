@@ -1,0 +1,34 @@
+<div class="height-full text-left {% if site.style == 'dark' %}box-shadow{% else %}border border-gray-light{% endif %} bg-white rounded-1 p-3">
+  <div class="mb-2 ws-normal">
+	{% if post.video %}
+            <video style="width:100%" controls><source src="{{ post.video }}" type="video/mp4" >Your browser does not support the embedded video or the video is blocked.</video>
+            {% else %}
+                {% if post.vimeo %}
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="{{ post.vimeo }}?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                {% else %}
+                    {% if post.youtube %}
+                    <iframe width="100%" height="auto" src="{{post.youtube}}?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    {% else %}
+{% if post.image %}<a href="{{ site.baseurl }}{{ post.url }}" ><img src="{{ post.image}}" width="100%" /></a>
+			{% endif %}
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+  </div>
+  <div class="d-flex flex-justify-between flex-items-start mb-1">
+    <h1 class="f4 lh-condensed mb-1">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+  </div>
+  <div class="d-flex flex-justify-between flex-items-start mb-1">
+	<p>{{ post.introduction }}</p>
+  </div>
+  <div class="mb-2 ws-normal">
+	{% for tag in post.tags %}
+                <a href="{{site.baseurl}}/archives/tags/#{{tag | slugify }}">{% octicon tag %}{{ tag }}</a>
+	{% endfor %}
+  </div>
+  <div class="text-gray mb-2 ws-normal">{{ post.date | date: "%b %d, %Y"}}</div>
+</div>

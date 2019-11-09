@@ -1,0 +1,27 @@
+<h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>{{page.title}}</h2>
+<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">{{page.description}}</p>
+<div class="d-sm-flex flex-wrap gutter-condensed mb-4">
+  {% for post in paginator.posts %}
+    <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+      {% include post-card.html %}
+    </div>
+  {% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+    <div class="paginator">
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">{% octicon chevron-left %} Prev</a>
+        {% endif %}
+            {% if paginator.page_trail %}
+              {% for trail in paginator.page_trail %}
+                <span {% if page.url == trail.path %}class="selected"{% endif %}>
+                    <a href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">{{ trail.num }}</a>
+                </span>
+              {% endfor %}
+            {% endif %}
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Next {% octicon chevron-right %}</a>
+        {% endif %}
+    </div>
+    {% endif %}
