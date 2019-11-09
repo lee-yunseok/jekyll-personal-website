@@ -135,7 +135,7 @@ google_verification:
 bing_verification:
 naver_verification:
 norton_verification:
-google_syndication:
+google_analytics:
 
 include:
   - _categories
