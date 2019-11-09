@@ -1,10 +1,8 @@
 <footer><div align="center" {% if site.style == 'dark' %}class="text-white"{% endif %}>
     <p><a href="https://github.com/{{ site.login }}" {% if site.style == 'dark' %}class="text-white"{% endif %} target="_blank">&copy; {{site.name }}</a>. Website made with {% octicon heart %} and <a href="http://jekyllrb.com/" {% if site.style == 'dark' %}class="text-white"{% endif %} target="_blank">Jekyll</a>, proudly hosted on <a href="https://pages.github.com" {% if site.style == 'dark' %}class="text-white"{% endif %} target="_blank">{% octicon mark-github fill:{{ icon_color }} %} GitHub Pages</a>.</p>
-    <p>The contents of this website are property of their respective owners.</p>
     <p><a href="{{baseurl}}/pages/privacy-policy" {% if site.style == 'dark' %}class="text-white"{% endif %}>{% octicon info fill:{{ icon_color }} %} Privacy Policy</a> <a href="{{baseurl}}/pages/contact" {% if site.style == 'dark' %}class="text-white"{% endif %}>{% octicon question fill:{{ icon_color }} %} Contact</a></p>
     </div>
 </footer>
-  </body>
 {% if post.vimeo %}
 <script src="https://player.vimeo.com/api/player.js"></script>
 {% endif %}
@@ -53,4 +51,5 @@
           startAnim_{{ elem[0] }}();
         {% endfor %}
     </script>
+  </body>
 </html>

@@ -22,7 +22,6 @@ classification: your_website_default_classification
 og_type: website
 facebook_admins: your_facebook_admin_number
 disqus: your_disqus_short_name
-contact: your_email_to_receive_contact_from_formspree
 
 plugins:
   - jekyll-octicons
