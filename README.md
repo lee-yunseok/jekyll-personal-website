@@ -304,6 +304,10 @@ You can also specify an image or video to be used as a thumbnail in Thought sect
 
 Replace your email address to `YOUR_EMAIL_ADDRESS` in the `/_pages/contact.md`. So people can send you an inquiry mail via [Formspree](https://formspree.io/).
 
+## privacy policy
+
+Enter your privacy policy at the `/_pages/privacy-policy.md`. You can easily make using [Privacy Policy Generator](https://www.privacypolicygenerator.info/).
+
 ## Styles
 
 Your website is pre-configured to use [GitHub's very flexible CSS framework called "Primer,"](https://styleguide.github.com/primer/). It's currently referenced within your `styles.scss` file, using the CSS import at-rule:
