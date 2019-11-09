@@ -116,7 +116,7 @@ email: Your email address. Leave it blank if you don't want to show your email.
 bio: Your short bio.
 org: Your GitHub organization. Leave it blank if you don't have your own organization.
 location: Your location.
-hireable: Set "True" or "false".
+hireable: Set "true" or "false".
 ```
 
 #### Default Metadata tags
