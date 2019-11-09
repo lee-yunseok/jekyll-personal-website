@@ -212,7 +212,7 @@ norton_verification: YOUR_VERIFICATION_CODE
 
 Just add your [tracking code](https://support.google.com/analytics/answer/1008080).
 
-`google_analytics: YOUR_TRACKING_CODE'
+`google_analytics: YOUR_TRACKING_CODE`
 
 ## About page
 
