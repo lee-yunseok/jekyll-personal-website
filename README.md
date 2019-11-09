@@ -1,6 +1,8 @@
 # Jekyll Personal Website
 
-The theme is an Jekyll expansion port of GitHub official personal website theme.
+The theme is an blogger friendly Jekyll expansion port of GitHub official personal website theme. It supports card-like archives as the latest posts. Each post can have previous, next, related posts, and comments. Card archives support pagination by category are available. Designed to easily apply metadata, analytics, verification, rss feed and sitemap. Contact forms are also supported. I've attached a screenshot of the archive below, and you can see my personal website as a demo page [here](https://Lee-Yunseok.GitHub.io).
+
+![sample screenshot](https://yggdrasilstudio.sirv.com/lee_yunseok/2019/11/jekyll-personal-website-posts-cards-screenshot.webp)
 
 ###Showcase your software development skills
 
@@ -185,7 +187,7 @@ This will use your [facebook page metadata](https://www.facebook.com/help/commun
 
 #### Disqus comment
 
-People can leave comments on your posts. Add your site and just type your [disqus short name](https://help.disqus.com/en/articles/1717111-what-s-a-shortname). Leave it blank if you don't want it.
+People can leave comments on your posts. Add your site and just type your [Disqus short name](https://help.disqus.com/en/articles/1717111-what-s-a-shortname). Leave it blank if you don't want it.
 
 `disqus`: Your Disqus short name.
 
@@ -204,6 +206,10 @@ Just add your [tracking code](https://support.google.com/analytics/answer/100808
 
 `google_analytics`:
 
+## Edit About page
+
+Edit `_/includes/about.html` file so you can include more information about you using HTML and [Liquid](https://jekyllrb.com/docs/liquid/).
+
 ## Adding pages
 
 To **add a page** to your website (e.g. detailed resume):
@@ -221,7 +227,7 @@ permalink: pages/YOUR_PAGE/
 ---
 ```
 
-4. If you want to use [liquid](https://jekyllrb.com/docs/liquid/), Enter only front matter in your page file, then create a file with the contents in `_includes`, and add `include_html: YOUR_LIQUID_FILE` to front matter in the page file.
+4. If you want to use Liquid, Enter only front matter in your page file, then create a file with the contents in `_includes`, and add `include_html: YOUR_LIQUID_FILE` to front matter in the page file.
 
 ## Adding category page
 
