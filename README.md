@@ -202,19 +202,19 @@ People can leave comments on your posts. Add your site and just type your [Disqu
 Enter the verification codes to make them work.
 
 ```
-google_verification:
-bing_verification:
-naver_verification:
-norton_verification:
+google_verification: YOUR_VERIFICATION_CODE
+bing_verification: YOUR_VERIFICATION_CODE
+naver_verification: YOUR_VERIFICATION_CODE
+norton_verification: YOUR_VERIFICATION_CODE
 ```
 
 #### Google Analytics
 
 Just add your [tracking code](https://support.google.com/analytics/answer/1008080).
 
-`google_analytics`:
+`google_analytics: YOUR_TRACKING_CODE'
 
-## Edit About page
+## About page
 
 Edit `_/includes/about.html` file so you can include more information about you using HTML and [Liquid](https://jekyllrb.com/docs/liquid/).
 
@@ -304,7 +304,7 @@ You can also specify an image or video to be used as a thumbnail in Thought sect
 
 Replace your email address to `YOUR_EMAIL_ADDRESS` in the `/_pages/contact.md`. So people can send you an inquiry mail via [Formspree](https://formspree.io/).
 
-## privacy policy
+## Privacy policy
 
 Enter your privacy policy at the `/_pages/privacy-policy.md`. You can easily make using [Privacy Policy Generator](https://www.privacypolicygenerator.info/).
 
