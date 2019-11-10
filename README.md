@@ -298,6 +298,21 @@ Jekyll's conventions for authoring and managing blog posts is very flexible. You
 
 You can also specify an image or video to be used as a thumbnail in Thought section or category page. Just add `image: YOUR_IMAGE_URL` or `youtube: YOUTUBE_VIDEO_URL`, `vimeo: VIMEO_VIDEO_URL`, `video: YOUR_VIDEO_URL` to the front matter.
 
+### Use jQuery lightSlider in your post
+
+Add image sliders on your post using the [jQuery lightSlider](https://github.com/sachinchoolur/lightslider) supported by the theme. Just write the code anywhere you want in the post.
+
+```
+<div class="yslider">
+  <ul>
+    <li>
+      <img src="YOUR_IMG_URL" alt="YOUR_IMG_DESCRIPTION" />
+    </li>
+    ## INSERT MORE <li><img></li> LIKE ABOVE IN ORDER ##
+  </ul>
+</div>
+```
+
 ## Use Formspree contact form
 
 Replace your email address to `YOUR_EMAIL_ADDRESS` in the `/_pages/contact.md`. So people can send you an inquiry mail via [Formspree](https://formspree.io/).
