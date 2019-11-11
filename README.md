@@ -214,7 +214,7 @@ Just add your [tracking code](https://support.google.com/analytics/answer/100808
 
 ## About page
 
-Edit `_/includes/about.html` file so you can include more information about you using HTML and [Liquid](https://jekyllrb.com/docs/liquid/).
+Edit `_/includes/about.html` file using HTML and [Liquid](https://jekyllrb.com/docs/liquid/) so you can include more information about you.
 
 ## Adding pages
 
