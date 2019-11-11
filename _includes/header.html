@@ -19,10 +19,10 @@
     <meta name="location" content="{{site.location}}"/>
     <meta name="classification" content="{% if page.classification %}{{page.classification}}, {{site.classification}}{% else %}{{site.classification}}{% endif %}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="creator" content="{{site.name}} ({{site.origin_url}})" />
-    <meta name="publisher" content="{{site.name}} ({{site.origin_url}}" />
+    <meta name="creator" content="{{site.name}} ({{site.github.url}})" />
+    <meta name="publisher" content="{{site.name}} ({{site.github.url}}" />
     <meta property="og:type" content="{% if page.og_type %}{{page.og_type}}{% else %}{{site.og_type}}{% endif %}"/>
-    <meta property="og:url" content="{{site.origin_url}}{{ page.url }}" />
+    <meta property="og:url" content="{{site.github.url}}{{ page.url }}" />
     <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% else %}{% endif %}{{ site.title }}" />
     {% if page.image %}
     	<meta property="og:image" content="{{page.image }}" />
@@ -31,11 +31,11 @@
     <meta property="og:site_name" content="{{ site.title }}">
     <meta itemprop="name" content="{% if page.title %}{{ page.title }} | {% else %}{% endif %}{{ site.title }}"/>
     <meta itemprop="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
-    <link rel="shortcut icon" href="{{ site.origin_url }}/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ site.github.url }}/favicon.ico" type="image/x-icon" />
     <meta name="application-name" content="{{site.name}} Website" />
     <link href="{{ "/assets/styles.css" | relative_url }}" rel="stylesheet" type="text/css">
-    <link rel="canonical" href="{{site.origin_url}}{{ page.url }}" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.origin_url }}/feed.xml" />
+    <link rel="canonical" href="{{site.github.url}}{{ page.url }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.github.url }}/feed.xml" />
     {% if site.social_media.twitter %}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@{{site.social_media.twitter}}" />
