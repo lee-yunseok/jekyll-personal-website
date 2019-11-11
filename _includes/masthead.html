@@ -4,8 +4,8 @@
   {% assign metadata_styles = 'd-flex flex-items-center mb-3' %}
 {% endif %}
 
-<img src="{{ site.avatar_url }}" class="circle mb-3" style="max-width: 150px;">
-<h1 class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed">{% if site.name %}{{ site.name }}{% else %}{{ site.login }}{% endif %}</h1>
+<img src="{{ site.github.owner_gravatar_url }}" class="circle mb-3" style="max-width: 150px;">
+<h1 class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed">{% if site.name %}{{ site.name }}{% else %}{{ site.github.owner_name }}{% endif %}</h1>
 <p class="mb-3 f4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
   {{ site.bio }}
 </p>
@@ -15,8 +15,8 @@
     {% if site.name %}
       <div class="{{ metadata_styles }}">
         {% octicon mark-github height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:GitHub %}
-        <a href="https://github.com/{{ site.login }}" {% if site.style == 'dark' %}class="text-white"{% endif %} target="_blank">
-          @{{ site.login }}
+        <a href="{{ site.github.owner_url }}" {% if site.style == 'dark' %}class="text-white"{% endif %} target="_blank">
+          @{{ site.github.owner_name }}
         </a>
       </div>
     {% endif %}
@@ -65,7 +65,7 @@
       </div>
     {% endif %}
     {% if site.hireable %}
-      <span title="저를 불러주세요" class="d-inline-block f5 rounded-2 text-white bg-green py-1 px-2">작업의뢰를 기다려요!</span>
+      <span title="Hire me" class="d-inline-block f5 rounded-2 text-white bg-green py-1 px-2">Available for hire</span>
     {% endif %}
   </div>
 {% endif %}

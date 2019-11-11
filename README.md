@@ -8,7 +8,7 @@ I've attached a screenshot of the archive below, and you can see my personal web
 
 ### Showcase your software development skills
 
-This repository gives you the code you'll need to kickstart a personal website that showcases your work as a software developer. And when you manage the code in a GitHub repository, it will automatically render a webpage with the repositories.
+This repository gives you the code you'll need to kickstart a personal website that showcases your work as a software developer. And when you manage the code in a GitHub repository, it will automatically render a webpage with the owner's photo and repositories.
 
 Your personal website is waiting to be personalized, though. It includes space to highlight your specific areas of interest in software development, like languages or industries. And it's standing by to publish your next great blog post.
 
@@ -107,11 +107,8 @@ Set your [timezone](https://github.com/tzinfo/tzinfo-data/blob/master/lib/tzinfo
 This theme requires you to enter GitHub user data.
 
 ```
-origin_url: Your website url.
 repository: your_login_name/your_repository
-avatar_url: Your GitHub avatar image url.
 name: Your name.
-login: Your GitHub login name.
 email: Your email address. Leave it blank if you don't want to show your email.
 bio: Your short bio.
 org: Your GitHub organization. Leave it blank if you don't have your own organization.
