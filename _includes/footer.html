@@ -1,17 +1,19 @@
 <footer><div align="center" {% if site.style == 'dark' %}class="text-white"{% endif %}>
-    <p><a href="{{ site.github.owner_url }}" {% if site.style == 'dark' %}class="text-white"{% endif %} target="_blank">&copy; {{site.name }}</a>. Website made with {% octicon heart %} and <a href="http://jekyllrb.com/" {% if site.style == 'dark' %}class="text-white"{% endif %} target="_blank">Jekyll</a>, proudly hosted on <a href="https://pages.github.com" {% if site.style == 'dark' %}class="text-white"{% endif %} target="_blank">{% octicon mark-github fill:{{ icon_color }} %} GitHub Pages</a>.</p>
-    <p><a href="{{baseurl}}/pages/privacy-policy" {% if site.style == 'dark' %}class="text-white"{% endif %}>{% octicon info fill:{{ icon_color }} %} Privacy Policy</a> <a href="{{baseurl}}/pages/contact" {% if site.style == 'dark' %}class="text-white"{% endif %}>{% octicon question fill:{{ icon_color }} %} Contact</a></p>
+    <p><a href="{{ site.baseurl }}" {% if site.style == 'dark' %}class="text-white"{% endif %} target="_blank">&copy; {{site.name }}</a>. Website made with {% octicon heart %} and <a href="http://jekyllrb.com/" {% if site.style == 'dark' %}class="text-white"{% endif %} target="_blank">Jekyll</a>, proudly hosted on <a href="https://pages.github.com" {% if site.style == 'dark' %}class="text-white"{% endif %} target="_blank">{% octicon mark-github fill:{{ icon_color }} %} GitHub Pages</a>.</p>
+    <p><a href="{{ site.baseurl }}/pages/privacy-policy" {% if site.style == 'dark' %}class="text-white"{% endif %}>{% octicon info fill:{{ icon_color }} %} Privacy Policy</a> <a href="{{ site.baseurl }}/pages/contact" {% if site.style == 'dark' %}class="text-white"{% endif %}>{% octicon question fill:{{ icon_color }} %} Contact</a></p>
     </div>
 </footer>
 {% if post.vimeo %}
 <script src="https://player.vimeo.com/api/player.js"></script>
 {% endif %}
-<script src="{{ baseurl }}/assets/vanilla-back-to-top.min.js" }}"></script>
+<script src="{{ site.baseurl}}/assets/vanilla-back-to-top.min.js" }}"></script>
 <script>addBackToTop({ diameter: 56, textColor: '#fff'})</script>
-<script type="text/javascript" src="{{ site.github.owner_url }}/assets/webpjs-0.0.2.min.js"></script>
-{% if site.google_analytics }<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', '{{ site.google_analytics }}', 'auto');ga('require', 'displayfeatures');ga('require', 'linkid', 'linkid.js');ga('set', 'anonymizeIp', true);ga('set', 'forceSSL', true);ga('send', 'pageview');</script>{% endif %}
+<script type="text/javascript" src="{{ site.baseurl}}/assets/webpjs-0.0.2.min.js"></script>
+{% if site.google_analytics }
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', '{{ site.google_analytics }}', 'auto');ga('require', 'displayfeatures');ga('require', 'linkid', 'linkid.js');ga('set', 'anonymizeIp', true);ga('set', 'forceSSL', true);ga('send', 'pageview');</script>
+{% endif %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="{{ baseurl }}/assets/lightslider.min.js"></script>
+<script src="{{ site.baseurl}}/assets/lightslider.min.js"></script>
     <script type="text/javascript"> 
         $(document).ready(function() {
           $(".yslider ul").lightSlider({
@@ -49,7 +51,8 @@
             {% endif %}
           }
           startAnim_{{ elem[0] }}();
-        {% endfor %}
+    {% endfor %}
     </script>
   </body>
 </html>
+{% endif %}

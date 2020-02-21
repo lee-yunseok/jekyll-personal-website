@@ -23,6 +23,8 @@ plugins:
   - jemoji
   - jekyll-archives
   - jekyll-paginate-v2
+  - jekyll-feed
+  - jekyll-sitemap
 compress_html:
   clippings: all
   comments: all
