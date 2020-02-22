@@ -2,7 +2,7 @@
 
 The theme is an blogger friendly Jekyll expansion port of GitHub official [personal website](https://github.com/github/personal-website) theme. It supports card-like archives as the latest posts. Each post can have image sliders and previous, next, related posts, and comments. Card archives support pagination by category are available. Designed to easily apply metadata, analytics, verification, rss feed and sitemap. Contact forms are also supported.
 
-I've attached a screenshot of the archive below, and you can see my personal website as a demo page [here](https://Lee-Yunseok.GitHub.io).
+I've attached a screenshot of the archive below.
 
 ![sample screenshot](https://yggdrasilstudio.sirv.com/lee_yunseok/2019/11/jekyll-personal-website-posts-cards-screenshot.webp)
 
